@@ -31,8 +31,8 @@ jobs:
       # 4️⃣ Build & Push Frontend Image
       - name: Build & Push Frontend Image
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/mis-frontend:${{ env.FRONTEND_TAG }} .
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/mis-frontend:${{ env.FRONTEND_TAG }}
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/yt-frontend:${{ env.FRONTEND_TAG }} .
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/yt-frontend:${{ env.FRONTEND_TAG }}
 
       # 5️⃣ Send Gmail Notification (Success)
       - name: Send Gmail Notification
@@ -43,7 +43,7 @@ jobs:
           server_port: 587
           username: ${{ secrets.GMAIL_USERNAME }}
           password: ${{ secrets.GMAIL_APP_PASSWORD }}
-          subject: "✅ Frontend Deployment Successful"
+          subject: "✅ Frontend Deployment Successfull"
           to: ${{ secrets.GMAIL_USERNAME }}
           from: GitHub Actions <${{ secrets.GMAIL_USERNAME }}>
           body: |
