@@ -47,7 +47,7 @@ jobs:
           to: ${{ secrets.GMAIL_USERNAME }}
           from: GitHub Actions <${{ secrets.GMAIL_USERNAME }}>
           body: |
-            🎉 Frontend Deployment Successful!
+            🎉 Frontend Deployment Successfull!
             Repository: ${{ github.repository }}
             Branch: main
             Commit: ${{ github.sha }}
