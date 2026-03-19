@@ -13,7 +13,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: password
 
   backend:
-    build: ./backend
+    image: siddhartha54/yt-backend:v111
     container_name: backend
     restart: always
     ports:
@@ -24,8 +24,7 @@ services:
       MONGO_URI: mongodb://root:password@mongo:27017/mydb?authSource=admin
 
   frontend:
-    build:
-      context: ./frontend
+    image: siddhartha54/yt-frontend:v111
     container_name: frontend
     restart: always
     ports:
